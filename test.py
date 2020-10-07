@@ -1,13 +1,4 @@
-import requests
-import sys
-
-
-url = "https://httpd.apache.org/"
-
-y = sys.platform
-print(y)
-
-x = requests.get(url)
-print(x.headers)
-for i in x.headers.keys():
-    print(i, x.headers[i])
+t = "http://218.146.55.65/g5/bbs/board.php?bo_table=notice&sop=and&sst=wr_datetime&sod=asc&page=1&device=pc"
+if '?' in t:
+    link = t[:t.index('?')]
+    print(link)
